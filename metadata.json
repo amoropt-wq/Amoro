@@ -1,0 +1,6 @@
+{
+  "name": "TeleCraft",
+  "description": "Aplikasi pesan instan bergaya Telegram dengan kustomisasi penuh: tema warna, gelembung chat, folder obrolan, channel, dan pesan tersimpan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

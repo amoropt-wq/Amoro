@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TeleCraft</string>
+    <string name="nav_chats">Obrolan</string>
+    <string name="nav_console">Konsol JSON</string>
+    <string name="nav_customize">Kustomisasi</string>
+    <string name="connect_title">Hubungkan ke Telegram Asli</string>
+    <string name="connect_subtitle">Terhubung langsung ke server resmi Telegram (api.telegram.org) dengan tampilan &amp; balasan JSON kustom.</string>
+    <string name="bot_token_label">Bot Token dari @BotFather</string>
+    <string name="bot_token_hint">123456789:ABCdefGHIjklMNOpqrsTUVwxyz</string>
+    <string name="connect_button">Hubungkan Sekarang</string>
+    <string name="error_empty_token">Masukkan Bot Token Telegram terlebih dahulu.</string>
+    <string name="error_invalid_token">Format Bot Token tidak valid (contoh: 123456:ABC...).</string>
+    <string name="json_copied">JSON disalin ke papan klip</string>
+    <string name="empty_chats_title">Belum Ada Obrolan Telegram</string>
+    <string name="empty_chats_tip">Kirim pesan ke bot Anda di aplikasi Telegram asli, atau ketuk tombol + untuk memulai chat lewat Chat ID.</string>
+</resources>
