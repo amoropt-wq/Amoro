@@ -18,9 +18,6 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Accept Android SDK licenses
         shell: bash
         run: |
@@ -34,7 +31,10 @@ jobs:
             grep -qxF "$hash" "$SDK_ROOT/licenses/android-sdk-license" 2>/dev/null || echo "$hash" >> "$SDK_ROOT/licenses/android-sdk-license"
           done
           grep -qxF "d975f751698a77b662f1254ddbeed3901e976f5a" "$SDK_ROOT/licenses/intel-android-extra-license" 2>/dev/null || echo "d975f751698a77b662f1254ddbeed3901e976f5a" >> "$SDK_ROOT/licenses/intel-android-extra-license"
-          yes | sdkmanager --licenses > /dev/null 2>&1 || true
+          SDKMANAGER="$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager"
+          if [ -x "$SDKMANAGER" ]; then
+            (yes 2>/dev/null || true) | "$SDKMANAGER" --licenses >/dev/null 2>&1 || true
+          fi
 
       - name: Setup Gradle 9.3.1
         uses: gradle/actions/setup-gradle@v4
